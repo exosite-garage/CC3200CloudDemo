@@ -46,9 +46,9 @@ follow the instructions in the Quick Start Guide included in the SDK.
 6) Build Each Project
    * "ti_rtos" (must be first)
    * "driverlib"
-   * Build "oslib" project
-   * Build "simplelink" project
-   * Build "provisioning_ap" project
+   * "oslib"
+   * "simplelink"
+   * "exosite_cloud_demo_for_cc3200" (must be last) 
 
 7) You can now flash the device using uniiflash or run the debugger, but note
    that you must flash it at least once before running it in the debugger to get
@@ -107,8 +107,11 @@ LED Status
 ================================================================================
 Known Issues
 ================================================================================
-* Some boards seem to be throwing an exception when setting an LED, we're
-  investigating this.
+* Some boards seem to be throwing an exception when setting an LED.
+* The temperature readings seem to be very eratic, jupping several degrees
+  within a single second.
+* The application will only run for about 20 minutes, this seems to be an issue
+  related to using i2c.
 
 ================================================================================
 Release Info
