@@ -106,7 +106,7 @@
 #define SPAWN_TASK_PRIORITY       9
 #define OSI_STACK_SIZE		      2048
 #define CONNECTION_TIMEOUT_COUNT  5000  /* 5sec */
-#define TOKEN_ARRAY_SIZE          6
+#define TOKEN_ARRAY_SIZE          16
 #define STRING_TOKEN_SIZE         10
 #define AP_SSID_LEN_MAX           33
 #define SL_STOP_TIMEOUT           30
@@ -1075,6 +1075,7 @@ void main()
     MAP_IntMasterEnable();
     MAP_IntEnable(FAULT_SYSTICK);
 
+    PinMuxConfig();
     GPIO_IF_LedConfigure(LED1|LED2|LED3);
     GPIO_IF_LedOff(MCU_ALL_LED_IND);
 

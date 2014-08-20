@@ -4,28 +4,28 @@
 
 SHELL = cmd.exe
 
-CG_TOOL_ROOT := c:/ti/ccsv6/tools/compiler/arm_5.1.5
+CG_TOOL_ROOT := c:/ti/ccsv6/tools/compiler/arm_5.1.7
 
 ORDERED_OBJS += \
 $(GEN_CMDS__FLAG) \
-"./exosite/exosite_meta.obj" \
-"./exosite/exosite_hal.obj" \
-"./exosite/exosite.obj" \
-"./utilities/strlib.obj" \
-"./uart_if.obj" \
-"./tmp006drv.obj" \
-"./timer_if.obj" \
-"./main.obj" \
-"./i2c_if.obj" \
-"./gpio_if.obj" \
-"./cloud_demo.obj" \
-"./button_if.obj" \
 "./bma222drv.obj" \
+"./button_if.obj" \
+"./cloud_demo.obj" \
+"./gpio_if.obj" \
+"./i2c_if.obj" \
+"./main.obj" \
+"./pinmux.obj" \
+"./timer_if.obj" \
+"./tmp006drv.obj" \
+"./uart_if.obj" \
+"./exosite/exosite.obj" \
+"./exosite/exosite_hal.obj" \
+"./exosite/exosite_meta.obj" \
 "../cc3200v1p32.cmd" \
 -l"libc.a" \
--l"V:/TI/exosite_cloud_demo_for_cc3200/exosite_cloud_demo_for_cc3200/ccs\..\..\oslib\ccs\ti_rtos\ti_rtos.a" \
--l"V:/TI/exosite_cloud_demo_for_cc3200/exosite_cloud_demo_for_cc3200/ccs\..\..\driverlib\ccs\Release\driverlib.a" \
--l"V:/TI/exosite_cloud_demo_for_cc3200/exosite_cloud_demo_for_cc3200/ccs\..\..\simplelink\ccs\OS\simplelink.a" \
+-l"C:/Users/Patrick/Desktop/CC3200CloudDemo-master/exosite_cloud_demo_for_cc3200/ccs\..\..\oslib\ccs\ti_rtos\ti_rtos.a" \
+-l"C:/Users/Patrick/Desktop/CC3200CloudDemo-master/exosite_cloud_demo_for_cc3200/ccs\..\..\driverlib\ccs\Release\driverlib.a" \
+-l"C:/Users/Patrick/Desktop/CC3200CloudDemo-master/exosite_cloud_demo_for_cc3200/ccs\..\..\simplelink\ccs\OS\simplelink.a" \
 
 -include ../makefile.init
 
@@ -35,10 +35,8 @@ RMDIR := RMDIR /S/Q
 # All of the sources participating in the build are defined here
 -include sources.mk
 -include subdir_vars.mk
--include utilities/subdir_vars.mk
 -include exosite/subdir_vars.mk
 -include subdir_rules.mk
--include utilities/subdir_rules.mk
 -include exosite/subdir_rules.mk
 -include objects.mk
 
@@ -143,39 +141,39 @@ BIN_OUTPUTS__QUOTED += \
 all: exosite_cloud_demo_for_cc3200.out
 
 dependents:
-	-cd C:/ti/CC3200SDK/cc3200-sdk/ti_rtos/ti_rtos_config/Default && $(MAKE) clean all
+	-cd C:/ti/tirtos_simplelink_2_00_02_36/products/cc3200-sdk_0.51a/ti_rtos/ti_rtos_config/Default && $(MAKE) all
 
 # Tool invocations
-exosite_cloud_demo_for_cc3200.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS) C:/ti/CC3200SDK/cc3200-sdk/ti_rtos/ti_rtos_config/Default/configPkg/linker.cmd
+exosite_cloud_demo_for_cc3200.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS) C:/ti/tirtos_simplelink_2_00_02_36/products/cc3200-sdk_0.51a/ti_rtos/ti_rtos_config/Default/configPkg/linker.cmd
 	@echo 'Building target: $@'
 	@echo 'Invoking: ARM Linker'
-	"c:/ti/ccsv6/tools/compiler/arm_5.1.5/bin/armcl" -mv7M4 --code_state=16 --float_support=vfplib --abi=eabi -me -g --gcc --define=ccs --define=NOTERM --define=SL_PLATFORM_MULTI_THREADED --define=cc3200 --display_error_number --diag_warning=225 --diag_wrap=off -z -m"exosite_cloud_demo_for_cc3200.map" --heap_size=0x4000 --stack_size=0x4000 -i"c:/ti/ccsv6/tools/compiler/arm_5.1.5/lib" -i"c:/ti/ccsv6/tools/compiler/arm_5.1.5/include" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="exosite_cloud_demo_for_cc3200_linkInfo.xml" --rom_model -l"C:/ti/CC3200SDK/cc3200-sdk/ti_rtos/ti_rtos_config/Default/configPkg/linker.cmd" -o "exosite_cloud_demo_for_cc3200.out" $(ORDERED_OBJS)
+	"c:/ti/ccsv6/tools/compiler/arm_5.1.7/bin/armcl" -mv7M4 --code_state=16 --float_support=vfplib --abi=eabi -me -g --gcc --define=ccs --define=NOTERM --define=SL_PLATFORM_MULTI_THREADED --define=cc3200 --display_error_number --diag_warning=225 --diag_wrap=off -z -m"exosite_cloud_demo_for_cc3200.map" --heap_size=0x4000 --stack_size=0x4000 -i"c:/ti/ccsv6/tools/compiler/arm_5.1.7/lib" -i"c:/ti/ccsv6/tools/compiler/arm_5.1.7/include" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="exosite_cloud_demo_for_cc3200_linkInfo.xml" --rom_model -l"C:/ti/tirtos_simplelink_2_00_02_36/products/cc3200-sdk_0.51a/ti_rtos/ti_rtos_config/Default/configPkg/linker.cmd" -o "exosite_cloud_demo_for_cc3200.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 	@$(MAKE) --no-print-directory post-build
 
 exosite_cloud_demo_for_cc3200.hex: $(EXE_OUTPUTS)
 	@echo 'Invoking: ARM Hex Utility'
-	"c:/ti/ccsv6/tools/compiler/arm_5.1.5/bin/armhex"  -o "exosite_cloud_demo_for_cc3200.hex" $(EXE_OUTPUTS__QUOTED)
+	"c:/ti/ccsv6/tools/compiler/arm_5.1.7/bin/armhex"  -o "exosite_cloud_demo_for_cc3200.hex" $(EXE_OUTPUTS__QUOTED)
 	@echo 'Finished building: $@'
 	@echo ' '
 
 # Other Targets
 clean:
 	-$(RM) $(EXE_OUTPUTS__QUOTED)$(BIN_OUTPUTS__QUOTED)
-	-$(RM) "bma222drv.pp" "button_if.pp" "cloud_demo.pp" "gpio_if.pp" "i2c_if.pp" "main.pp" "timer_if.pp" "tmp006drv.pp" "uart_if.pp" "utilities\strlib.pp" "exosite\exosite.pp" "exosite\exosite_hal.pp" "exosite\exosite_meta.pp" 
-	-$(RM) "bma222drv.obj" "button_if.obj" "cloud_demo.obj" "gpio_if.obj" "i2c_if.obj" "main.obj" "timer_if.obj" "tmp006drv.obj" "uart_if.obj" "utilities\strlib.obj" "exosite\exosite.obj" "exosite\exosite_hal.obj" "exosite\exosite_meta.obj" 
+	-$(RM) "bma222drv.pp" "button_if.pp" "cloud_demo.pp" "gpio_if.pp" "i2c_if.pp" "main.pp" "pinmux.pp" "timer_if.pp" "tmp006drv.pp" "uart_if.pp" "exosite\exosite.pp" "exosite\exosite_hal.pp" "exosite\exosite_meta.pp" 
+	-$(RM) "bma222drv.obj" "button_if.obj" "cloud_demo.obj" "gpio_if.obj" "i2c_if.obj" "main.obj" "pinmux.obj" "timer_if.obj" "tmp006drv.obj" "uart_if.obj" "exosite\exosite.obj" "exosite\exosite_hal.obj" "exosite\exosite_meta.obj" 
 	-@echo 'Finished clean'
 	-@echo ' '
 
 post-build:
 	-@echo 'convert to bin'
-	-"c:/ti/ccsv6/utils/tiobj2bin/tiobj2bin" "exosite_cloud_demo_for_cc3200.out" "exosite_cloud_demo_for_cc3200.bin" "c:/ti/ccsv6/tools/compiler/arm_5.1.5/bin/armofd" "c:/ti/ccsv6/tools/compiler/arm_5.1.5/bin/armhex" "c:/ti/ccsv6/utils/tiobj2bin/mkhex4bin"
+	-"c:/ti/ccsv6/utils/tiobj2bin/tiobj2bin" "exosite_cloud_demo_for_cc3200.out" "exosite_cloud_demo_for_cc3200.bin" "c:/ti/ccsv6/tools/compiler/arm_5.1.7/bin/armofd" "c:/ti/ccsv6/tools/compiler/arm_5.1.7/bin/armhex" "c:/ti/ccsv6/utils/tiobj2bin/mkhex4bin"
 	-@echo ' '
 
 .PHONY: all clean dependents
 .SECONDARY: post-build
-C:/ti/CC3200SDK/cc3200-sdk/ti_rtos/ti_rtos_config/Default/configPkg/linker.cmd:
+C:/ti/tirtos_simplelink_2_00_02_36/products/cc3200-sdk_0.51a/ti_rtos/ti_rtos_config/Default/configPkg/linker.cmd:
 
 -include ../makefile.targets
 

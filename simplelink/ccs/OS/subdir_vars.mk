@@ -4,17 +4,17 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-V:/TI/exosite_cloud_demo_for_cc3200/simplelink/cc_pal.c \
-V:/TI/exosite_cloud_demo_for_cc3200/simplelink/Source/device.c \
-V:/TI/exosite_cloud_demo_for_cc3200/simplelink/Source/driver.c \
-V:/TI/exosite_cloud_demo_for_cc3200/simplelink/Source/flowcont.c \
-V:/TI/exosite_cloud_demo_for_cc3200/simplelink/Source/fs.c \
-V:/TI/exosite_cloud_demo_for_cc3200/simplelink/Source/netapp.c \
-V:/TI/exosite_cloud_demo_for_cc3200/simplelink/Source/netcfg.c \
-V:/TI/exosite_cloud_demo_for_cc3200/simplelink/Source/nonos.c \
-V:/TI/exosite_cloud_demo_for_cc3200/simplelink/Source/socket.c \
-V:/TI/exosite_cloud_demo_for_cc3200/simplelink/Source/spawn.c \
-V:/TI/exosite_cloud_demo_for_cc3200/simplelink/Source/wlan.c 
+C:/Users/Patrick/Desktop/CC3200CloudDemo-master/simplelink/cc_pal.c \
+C:/Users/Patrick/Desktop/CC3200CloudDemo-master/simplelink/Source/device.c \
+C:/Users/Patrick/Desktop/CC3200CloudDemo-master/simplelink/Source/driver.c \
+C:/Users/Patrick/Desktop/CC3200CloudDemo-master/simplelink/Source/flowcont.c \
+C:/Users/Patrick/Desktop/CC3200CloudDemo-master/simplelink/Source/fs.c \
+C:/Users/Patrick/Desktop/CC3200CloudDemo-master/simplelink/Source/netapp.c \
+C:/Users/Patrick/Desktop/CC3200CloudDemo-master/simplelink/Source/netcfg.c \
+C:/Users/Patrick/Desktop/CC3200CloudDemo-master/simplelink/Source/nonos.c \
+C:/Users/Patrick/Desktop/CC3200CloudDemo-master/simplelink/Source/socket.c \
+C:/Users/Patrick/Desktop/CC3200CloudDemo-master/simplelink/Source/spawn.c \
+C:/Users/Patrick/Desktop/CC3200CloudDemo-master/simplelink/Source/wlan.c 
 
 OBJS += \
 ./cc_pal.obj \
@@ -69,16 +69,16 @@ OBJS__QUOTED += \
 "wlan.obj" 
 
 C_SRCS__QUOTED += \
-"V:/TI/exosite_cloud_demo_for_cc3200/simplelink/cc_pal.c" \
-"V:/TI/exosite_cloud_demo_for_cc3200/simplelink/Source/device.c" \
-"V:/TI/exosite_cloud_demo_for_cc3200/simplelink/Source/driver.c" \
-"V:/TI/exosite_cloud_demo_for_cc3200/simplelink/Source/flowcont.c" \
-"V:/TI/exosite_cloud_demo_for_cc3200/simplelink/Source/fs.c" \
-"V:/TI/exosite_cloud_demo_for_cc3200/simplelink/Source/netapp.c" \
-"V:/TI/exosite_cloud_demo_for_cc3200/simplelink/Source/netcfg.c" \
-"V:/TI/exosite_cloud_demo_for_cc3200/simplelink/Source/nonos.c" \
-"V:/TI/exosite_cloud_demo_for_cc3200/simplelink/Source/socket.c" \
-"V:/TI/exosite_cloud_demo_for_cc3200/simplelink/Source/spawn.c" \
-"V:/TI/exosite_cloud_demo_for_cc3200/simplelink/Source/wlan.c" 
+"C:/Users/Patrick/Desktop/CC3200CloudDemo-master/simplelink/cc_pal.c" \
+"C:/Users/Patrick/Desktop/CC3200CloudDemo-master/simplelink/Source/device.c" \
+"C:/Users/Patrick/Desktop/CC3200CloudDemo-master/simplelink/Source/driver.c" \
+"C:/Users/Patrick/Desktop/CC3200CloudDemo-master/simplelink/Source/flowcont.c" \
+"C:/Users/Patrick/Desktop/CC3200CloudDemo-master/simplelink/Source/fs.c" \
+"C:/Users/Patrick/Desktop/CC3200CloudDemo-master/simplelink/Source/netapp.c" \
+"C:/Users/Patrick/Desktop/CC3200CloudDemo-master/simplelink/Source/netcfg.c" \
+"C:/Users/Patrick/Desktop/CC3200CloudDemo-master/simplelink/Source/nonos.c" \
+"C:/Users/Patrick/Desktop/CC3200CloudDemo-master/simplelink/Source/socket.c" \
+"C:/Users/Patrick/Desktop/CC3200CloudDemo-master/simplelink/Source/spawn.c" \
+"C:/Users/Patrick/Desktop/CC3200CloudDemo-master/simplelink/Source/wlan.c" 
 
 

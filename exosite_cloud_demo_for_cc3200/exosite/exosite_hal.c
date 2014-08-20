@@ -37,6 +37,7 @@
 #include "exosite_meta.h"
 #include "socket.h"
 #include <string.h>
+#include <stdio.h>
 
 // local variables
 #define EXOMETA_ADDR
@@ -79,9 +80,9 @@ exoHAL_ReadUUID(unsigned char if_nbr, char * UUID_buf)
 	  Report("MAC - %02x:%02x:%02x:%02x:%02x:%02x\r\n", raw_mac[0], raw_mac[1], raw_mac[2], raw_mac[3], raw_mac[4], raw_mac[5]);
 	  for (i = 0; i < maclen; i++)
 	  {
-        itoa(((raw_mac[i] & 0xf0) >> 4), UUID_buf + valuelen, 16); //make a string for length
+	    sprintf(UUID_buf + valuelen, "%x", ((raw_mac[i] & 0xf0) >> 4)); //make a string for length
         valuelen++;
-        itoa((raw_mac[i] & 0xf), UUID_buf + valuelen, 16); //make a string for length
+	    sprintf(UUID_buf + valuelen, "%x", (raw_mac[i] & 0xf)); //make a string for length
         valuelen++;
 	  }
       valuelen = 12;

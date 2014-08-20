@@ -4,29 +4,29 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-V:/TI/exosite_cloud_demo_for_cc3200/driverlib/adc.c \
-V:/TI/exosite_cloud_demo_for_cc3200/driverlib/aes.c \
-V:/TI/exosite_cloud_demo_for_cc3200/driverlib/camera.c \
-V:/TI/exosite_cloud_demo_for_cc3200/driverlib/cpu.c \
-V:/TI/exosite_cloud_demo_for_cc3200/driverlib/crc.c \
-V:/TI/exosite_cloud_demo_for_cc3200/driverlib/des.c \
-V:/TI/exosite_cloud_demo_for_cc3200/driverlib/flash.c \
-V:/TI/exosite_cloud_demo_for_cc3200/driverlib/gpio.c \
-V:/TI/exosite_cloud_demo_for_cc3200/driverlib/hwspinlock.c \
-V:/TI/exosite_cloud_demo_for_cc3200/driverlib/i2c.c \
-V:/TI/exosite_cloud_demo_for_cc3200/driverlib/i2s.c \
-V:/TI/exosite_cloud_demo_for_cc3200/driverlib/interrupt.c \
-V:/TI/exosite_cloud_demo_for_cc3200/driverlib/pin.c \
-V:/TI/exosite_cloud_demo_for_cc3200/driverlib/prcm.c \
-V:/TI/exosite_cloud_demo_for_cc3200/driverlib/sdhost.c \
-V:/TI/exosite_cloud_demo_for_cc3200/driverlib/shamd5.c \
-V:/TI/exosite_cloud_demo_for_cc3200/driverlib/spi.c \
-V:/TI/exosite_cloud_demo_for_cc3200/driverlib/systick.c \
-V:/TI/exosite_cloud_demo_for_cc3200/driverlib/timer.c \
-V:/TI/exosite_cloud_demo_for_cc3200/driverlib/uart.c \
-V:/TI/exosite_cloud_demo_for_cc3200/driverlib/udma.c \
-V:/TI/exosite_cloud_demo_for_cc3200/driverlib/utils.c \
-V:/TI/exosite_cloud_demo_for_cc3200/driverlib/wdt.c 
+C:/Users/Patrick/Desktop/CC3200CloudDemo-master/driverlib/adc.c \
+C:/Users/Patrick/Desktop/CC3200CloudDemo-master/driverlib/aes.c \
+C:/Users/Patrick/Desktop/CC3200CloudDemo-master/driverlib/camera.c \
+C:/Users/Patrick/Desktop/CC3200CloudDemo-master/driverlib/cpu.c \
+C:/Users/Patrick/Desktop/CC3200CloudDemo-master/driverlib/crc.c \
+C:/Users/Patrick/Desktop/CC3200CloudDemo-master/driverlib/des.c \
+C:/Users/Patrick/Desktop/CC3200CloudDemo-master/driverlib/flash.c \
+C:/Users/Patrick/Desktop/CC3200CloudDemo-master/driverlib/gpio.c \
+C:/Users/Patrick/Desktop/CC3200CloudDemo-master/driverlib/hwspinlock.c \
+C:/Users/Patrick/Desktop/CC3200CloudDemo-master/driverlib/i2c.c \
+C:/Users/Patrick/Desktop/CC3200CloudDemo-master/driverlib/i2s.c \
+C:/Users/Patrick/Desktop/CC3200CloudDemo-master/driverlib/interrupt.c \
+C:/Users/Patrick/Desktop/CC3200CloudDemo-master/driverlib/pin.c \
+C:/Users/Patrick/Desktop/CC3200CloudDemo-master/driverlib/prcm.c \
+C:/Users/Patrick/Desktop/CC3200CloudDemo-master/driverlib/sdhost.c \
+C:/Users/Patrick/Desktop/CC3200CloudDemo-master/driverlib/shamd5.c \
+C:/Users/Patrick/Desktop/CC3200CloudDemo-master/driverlib/spi.c \
+C:/Users/Patrick/Desktop/CC3200CloudDemo-master/driverlib/systick.c \
+C:/Users/Patrick/Desktop/CC3200CloudDemo-master/driverlib/timer.c \
+C:/Users/Patrick/Desktop/CC3200CloudDemo-master/driverlib/uart.c \
+C:/Users/Patrick/Desktop/CC3200CloudDemo-master/driverlib/udma.c \
+C:/Users/Patrick/Desktop/CC3200CloudDemo-master/driverlib/utils.c \
+C:/Users/Patrick/Desktop/CC3200CloudDemo-master/driverlib/wdt.c 
 
 OBJS += \
 ./adc.obj \
@@ -129,28 +129,28 @@ OBJS__QUOTED += \
 "wdt.obj" 
 
 C_SRCS__QUOTED += \
-"V:/TI/exosite_cloud_demo_for_cc3200/driverlib/adc.c" \
-"V:/TI/exosite_cloud_demo_for_cc3200/driverlib/aes.c" \
-"V:/TI/exosite_cloud_demo_for_cc3200/driverlib/camera.c" \
-"V:/TI/exosite_cloud_demo_for_cc3200/driverlib/cpu.c" \
-"V:/TI/exosite_cloud_demo_for_cc3200/driverlib/crc.c" \
-"V:/TI/exosite_cloud_demo_for_cc3200/driverlib/des.c" \
-"V:/TI/exosite_cloud_demo_for_cc3200/driverlib/flash.c" \
-"V:/TI/exosite_cloud_demo_for_cc3200/driverlib/gpio.c" \
-"V:/TI/exosite_cloud_demo_for_cc3200/driverlib/hwspinlock.c" \
-"V:/TI/exosite_cloud_demo_for_cc3200/driverlib/i2c.c" \
-"V:/TI/exosite_cloud_demo_for_cc3200/driverlib/i2s.c" \
-"V:/TI/exosite_cloud_demo_for_cc3200/driverlib/interrupt.c" \
-"V:/TI/exosite_cloud_demo_for_cc3200/driverlib/pin.c" \
-"V:/TI/exosite_cloud_demo_for_cc3200/driverlib/prcm.c" \
-"V:/TI/exosite_cloud_demo_for_cc3200/driverlib/sdhost.c" \
-"V:/TI/exosite_cloud_demo_for_cc3200/driverlib/shamd5.c" \
-"V:/TI/exosite_cloud_demo_for_cc3200/driverlib/spi.c" \
-"V:/TI/exosite_cloud_demo_for_cc3200/driverlib/systick.c" \
-"V:/TI/exosite_cloud_demo_for_cc3200/driverlib/timer.c" \
-"V:/TI/exosite_cloud_demo_for_cc3200/driverlib/uart.c" \
-"V:/TI/exosite_cloud_demo_for_cc3200/driverlib/udma.c" \
-"V:/TI/exosite_cloud_demo_for_cc3200/driverlib/utils.c" \
-"V:/TI/exosite_cloud_demo_for_cc3200/driverlib/wdt.c" 
+"C:/Users/Patrick/Desktop/CC3200CloudDemo-master/driverlib/adc.c" \
+"C:/Users/Patrick/Desktop/CC3200CloudDemo-master/driverlib/aes.c" \
+"C:/Users/Patrick/Desktop/CC3200CloudDemo-master/driverlib/camera.c" \
+"C:/Users/Patrick/Desktop/CC3200CloudDemo-master/driverlib/cpu.c" \
+"C:/Users/Patrick/Desktop/CC3200CloudDemo-master/driverlib/crc.c" \
+"C:/Users/Patrick/Desktop/CC3200CloudDemo-master/driverlib/des.c" \
+"C:/Users/Patrick/Desktop/CC3200CloudDemo-master/driverlib/flash.c" \
+"C:/Users/Patrick/Desktop/CC3200CloudDemo-master/driverlib/gpio.c" \
+"C:/Users/Patrick/Desktop/CC3200CloudDemo-master/driverlib/hwspinlock.c" \
+"C:/Users/Patrick/Desktop/CC3200CloudDemo-master/driverlib/i2c.c" \
+"C:/Users/Patrick/Desktop/CC3200CloudDemo-master/driverlib/i2s.c" \
+"C:/Users/Patrick/Desktop/CC3200CloudDemo-master/driverlib/interrupt.c" \
+"C:/Users/Patrick/Desktop/CC3200CloudDemo-master/driverlib/pin.c" \
+"C:/Users/Patrick/Desktop/CC3200CloudDemo-master/driverlib/prcm.c" \
+"C:/Users/Patrick/Desktop/CC3200CloudDemo-master/driverlib/sdhost.c" \
+"C:/Users/Patrick/Desktop/CC3200CloudDemo-master/driverlib/shamd5.c" \
+"C:/Users/Patrick/Desktop/CC3200CloudDemo-master/driverlib/spi.c" \
+"C:/Users/Patrick/Desktop/CC3200CloudDemo-master/driverlib/systick.c" \
+"C:/Users/Patrick/Desktop/CC3200CloudDemo-master/driverlib/timer.c" \
+"C:/Users/Patrick/Desktop/CC3200CloudDemo-master/driverlib/uart.c" \
+"C:/Users/Patrick/Desktop/CC3200CloudDemo-master/driverlib/udma.c" \
+"C:/Users/Patrick/Desktop/CC3200CloudDemo-master/driverlib/utils.c" \
+"C:/Users/Patrick/Desktop/CC3200CloudDemo-master/driverlib/wdt.c" 
 
 

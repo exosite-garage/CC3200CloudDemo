@@ -41,6 +41,7 @@
 #include "tmp006drv.h"
 #include "bma222drv.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 // local variables
 #define VENDOR_NAME            "texasinstruments"
@@ -247,7 +248,7 @@ void Cloud_Read(void)
   if (Read_status)
   {
     ledx[Read_status] = 0;
-    cloud_data = atoc(ledx[0]);
+    cloud_data = atoi(&ledx[0]);
     Report("Exosite Read:  %s=%d\r\n", LEDCTRL_ALIAS, cloud_data);
 
     led_onoff = cloud_data;
@@ -280,7 +281,8 @@ void Report_Sensors(void)
   post_len += strlen(PING_ALIAS);
   post_str[post_len] = '=';
   post_len++;
-  itoa(uptime, &post_str[post_len], 10);
+  sprintf(&post_str[post_len], "%d", uptime);
+
   post_len = strlen(post_str);
 
   post_str[post_len] = '&';
@@ -298,7 +300,7 @@ void Report_Sensors(void)
   post_len += strlen(SW2_ALIAS);
   post_str[post_len] = '=';
   post_len++;
-  itoa((char)sw2_button_on, &post_str[post_len], 10);
+  sprintf(&post_str[post_len], "%d", (char)sw2_button_on);
   post_len = strlen(post_str);
   post_len += snprintf(&post_str[post_len], 33, "&acc=%.0f&accX=%d&accY=%d&accZ=%d",
 		  max_accel,
@@ -317,19 +319,19 @@ void Report_Sensors(void)
     post_len += strlen(IP_ALIAS);
     post_str[post_len] = '=';
     post_len++;
-    itoa((char)SL_IPV4_BYTE(g_ipV4.ipV4,3), &post_str[post_len], 10);
+    sprintf(&post_str[post_len], "%d", (char)SL_IPV4_BYTE(g_ipV4.ipV4,3));
     post_len = strlen(post_str);
     post_str[post_len] = '.';
     post_len++;
-    itoa((char)SL_IPV4_BYTE(g_ipV4.ipV4,2), &post_str[post_len], 10);
+    sprintf(&post_str[post_len], "%d", (char)SL_IPV4_BYTE(g_ipV4.ipV4,2));
     post_len = strlen(post_str);
     post_str[post_len] = '.';
     post_len++;
-    itoa((char)SL_IPV4_BYTE(g_ipV4.ipV4,1), &post_str[post_len], 10);
+    sprintf(&post_str[post_len], "%d", (char)SL_IPV4_BYTE(g_ipV4.ipV4,1));
     post_len = strlen(post_str);
     post_str[post_len] = '.';
     post_len++;
-    itoa((char)SL_IPV4_BYTE(g_ipV4.ipV4,0), &post_str[post_len], 10);
+    sprintf(&post_str[post_len], "%d", (char)SL_IPV4_BYTE(g_ipV4.ipV4,0));
     post_len = strlen(post_str);
   }
 

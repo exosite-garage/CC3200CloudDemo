@@ -27,14 +27,9 @@
 	</natures>
 	<linkedResources>
 		<link>
-			<name>CC3200.ccxml</name>
-			<type>1</type>
-			<location>C:/Users/Patrick/ti/CCSTargetConfigurations/CC3200.ccxml</location>
-		</link>
-		<link>
 			<name>bma222drv.c</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/bma222drv.c</locationURI>
+			<locationURI>copy_PARENT/bma222drv.c</locationURI>
 		</link>
 		<link>
 			<name>button_if.c</name>
@@ -44,12 +39,12 @@
 		<link>
 			<name>cloud_demo.c</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/cloud_demo.c</locationURI>
+			<locationURI>copy_PARENT/cloud_demo.c</locationURI>
 		</link>
 		<link>
 			<name>exosite</name>
 			<type>2</type>
-			<locationURI>PARENT-1-PROJECT_LOC/exosite</locationURI>
+			<locationURI>copy_PARENT/exosite</locationURI>
 		</link>
 		<link>
 			<name>gpio_if.c</name>
@@ -64,17 +59,7 @@
 		<link>
 			<name>main.c</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/main.c</locationURI>
-		</link>
-		<link>
-			<name>pinmux.c</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/pinmux.c</locationURI>
-		</link>
-		<link>
-			<name>pinmux.h</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/pinmux.h</locationURI>
+			<locationURI>copy_PARENT/main.c</locationURI>
 		</link>
 		<link>
 			<name>timer_if.c</name>
@@ -84,7 +69,7 @@
 		<link>
 			<name>tmp006drv.c</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/tmp006drv.c</locationURI>
+			<locationURI>copy_PARENT/tmp006drv.c</locationURI>
 		</link>
 		<link>
 			<name>uart_if.c</name>
@@ -94,7 +79,17 @@
 		<link>
 			<name>utilities</name>
 			<type>2</type>
-			<locationURI>PROJECT_LOC/../utilities</locationURI>
+			<locationURI>copy_PARENT/utilities</locationURI>
 		</link>
 	</linkedResources>
+	<variableList>
+		<variable>
+			<name>copy_PARENT</name>
+			<value>file:/V:/TI/cc3200_cloud/exosite_cloud_demo_for_cc3200</value>
+		</variable>
+		<variable>
+			<name>copy_PARENT1</name>
+			<value>$%7BPARENT-1-copy_PARENT%7D</value>
+		</variable>
+	</variableList>
 </projectDescription>

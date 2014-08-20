@@ -4,9 +4,9 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-V:/TI/cc3200_cloud/exosite_cloud_demo_for_cc3200/exosite/exosite.c \
-V:/TI/cc3200_cloud/exosite_cloud_demo_for_cc3200/exosite/exosite_hal.c \
-V:/TI/cc3200_cloud/exosite_cloud_demo_for_cc3200/exosite/exosite_meta.c 
+C:/Users/Patrick/Desktop/CC3200CloudDemo-master/exosite_cloud_demo_for_cc3200/exosite/exosite.c \
+C:/Users/Patrick/Desktop/CC3200CloudDemo-master/exosite_cloud_demo_for_cc3200/exosite/exosite_hal.c \
+C:/Users/Patrick/Desktop/CC3200CloudDemo-master/exosite_cloud_demo_for_cc3200/exosite/exosite_meta.c 
 
 OBJS += \
 ./exosite/exosite.obj \
@@ -29,8 +29,8 @@ OBJS__QUOTED += \
 "exosite\exosite_meta.obj" 
 
 C_SRCS__QUOTED += \
-"V:/TI/cc3200_cloud/exosite_cloud_demo_for_cc3200/exosite/exosite.c" \
-"V:/TI/cc3200_cloud/exosite_cloud_demo_for_cc3200/exosite/exosite_hal.c" \
-"V:/TI/cc3200_cloud/exosite_cloud_demo_for_cc3200/exosite/exosite_meta.c" 
+"C:/Users/Patrick/Desktop/CC3200CloudDemo-master/exosite_cloud_demo_for_cc3200/exosite/exosite.c" \
+"C:/Users/Patrick/Desktop/CC3200CloudDemo-master/exosite_cloud_demo_for_cc3200/exosite/exosite_hal.c" \
+"C:/Users/Patrick/Desktop/CC3200CloudDemo-master/exosite_cloud_demo_for_cc3200/exosite/exosite_meta.c" 
 
 

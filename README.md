@@ -38,10 +38,15 @@ follow the instructions in the Quick Start Guide included in the SDK.
 4) Import all the projects.
    * Select "Projects -> Import CCS Projects..."
    * Browse for and select the folder you created in step one.
-   * Check all boxes for "Discovered Projects"
+   * Check all boxes in "Discovered Projects"
    * Click Finish
 
-5) Repeat step 4 for the TI RTOS.
+5) Import the TI RTOS project (`ti_rtos_config`)
+   * Select "Projects -> Import CCS Projects..."
+   * Browse for and select the installation folder.
+     (`C:\ti\tirtos_simplelink_2_00_02_36` by default.)
+   * Check the box for `ti_rtos_config`.
+   * Click Finish
 
 6) Build Each Project
    * "ti_rtos" (must be first)

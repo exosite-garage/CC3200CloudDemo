@@ -35,6 +35,7 @@
 #include "exosite_hal.h"
 #include "exosite_meta.h"
 #include "exosite.h"
+#include <stdio.h>
 #include <string.h>
 
 //local defines
@@ -265,7 +266,7 @@ Exosite_Activate(void)
 
   // Get activation Serial Number
   length = strlen(exosite_provision_info);
-  itoa(length, strLen, 10); //make a string for length
+  sprintf(strLen, "%d", length); //make a string for length
 
   sendLine(sock, POSTDATA_LINE, "/provision/activate");
   sendLine(sock, HOST_LINE, NULL);
@@ -500,7 +501,7 @@ Exosite_Write(char * pbuf, unsigned char bufsize)
 //  s.send('Content-Length: 6\r\n\r\n')
 //  s.send('temp=2')
 
-  itoa((int)bufsize, strBuf, 10); //make a string for length
+  sprintf(strBuf, "%d", bufsize); //make a string for length
 
   sendLine(sock, POSTDATA_LINE, "/onep:v1/stack/alias");
   sendLine(sock, HOST_LINE, NULL);

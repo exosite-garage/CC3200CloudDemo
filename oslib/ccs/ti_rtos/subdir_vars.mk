@@ -4,7 +4,7 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-V:/TI/exosite_cloud_demo_for_cc3200/oslib/osi_tirtos.c 
+C:/Users/Patrick/Desktop/CC3200CloudDemo-master/oslib/osi_tirtos.c 
 
 OBJS += \
 ./osi_tirtos.obj 
@@ -19,6 +19,6 @@ OBJS__QUOTED += \
 "osi_tirtos.obj" 
 
 C_SRCS__QUOTED += \
-"V:/TI/exosite_cloud_demo_for_cc3200/oslib/osi_tirtos.c" 
+"C:/Users/Patrick/Desktop/CC3200CloudDemo-master/oslib/osi_tirtos.c" 
 
 

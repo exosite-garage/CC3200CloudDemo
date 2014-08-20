@@ -7,15 +7,16 @@ CMD_SRCS += \
 ../cc3200v1p32.cmd 
 
 C_SRCS += \
-V:/TI/cc3200_cloud/exosite_cloud_demo_for_cc3200/bma222drv.c \
-V:/TI/exosite_cloud_demo_for_cc3200/common/button_if.c \
-V:/TI/cc3200_cloud/exosite_cloud_demo_for_cc3200/cloud_demo.c \
-V:/TI/exosite_cloud_demo_for_cc3200/common/gpio_if.c \
-V:/TI/exosite_cloud_demo_for_cc3200/common/i2c_if.c \
-V:/TI/cc3200_cloud/exosite_cloud_demo_for_cc3200/main.c \
-V:/TI/exosite_cloud_demo_for_cc3200/common/timer_if.c \
-V:/TI/cc3200_cloud/exosite_cloud_demo_for_cc3200/tmp006drv.c \
-V:/TI/exosite_cloud_demo_for_cc3200/common/uart_if.c 
+C:/Users/Patrick/Desktop/CC3200CloudDemo-master/exosite_cloud_demo_for_cc3200/bma222drv.c \
+C:/Users/Patrick/Desktop/CC3200CloudDemo-master/common/button_if.c \
+C:/Users/Patrick/Desktop/CC3200CloudDemo-master/exosite_cloud_demo_for_cc3200/cloud_demo.c \
+C:/Users/Patrick/Desktop/CC3200CloudDemo-master/common/gpio_if.c \
+C:/Users/Patrick/Desktop/CC3200CloudDemo-master/common/i2c_if.c \
+C:/Users/Patrick/Desktop/CC3200CloudDemo-master/exosite_cloud_demo_for_cc3200/main.c \
+C:/Users/Patrick/Desktop/CC3200CloudDemo-master/exosite_cloud_demo_for_cc3200/pinmux.c \
+C:/Users/Patrick/Desktop/CC3200CloudDemo-master/common/timer_if.c \
+C:/Users/Patrick/Desktop/CC3200CloudDemo-master/exosite_cloud_demo_for_cc3200/tmp006drv.c \
+C:/Users/Patrick/Desktop/CC3200CloudDemo-master/common/uart_if.c 
 
 OBJS += \
 ./bma222drv.obj \
@@ -24,6 +25,7 @@ OBJS += \
 ./gpio_if.obj \
 ./i2c_if.obj \
 ./main.obj \
+./pinmux.obj \
 ./timer_if.obj \
 ./tmp006drv.obj \
 ./uart_if.obj 
@@ -35,6 +37,7 @@ C_DEPS += \
 ./gpio_if.pp \
 ./i2c_if.pp \
 ./main.pp \
+./pinmux.pp \
 ./timer_if.pp \
 ./tmp006drv.pp \
 ./uart_if.pp 
@@ -46,6 +49,7 @@ C_DEPS__QUOTED += \
 "gpio_if.pp" \
 "i2c_if.pp" \
 "main.pp" \
+"pinmux.pp" \
 "timer_if.pp" \
 "tmp006drv.pp" \
 "uart_if.pp" 
@@ -57,19 +61,21 @@ OBJS__QUOTED += \
 "gpio_if.obj" \
 "i2c_if.obj" \
 "main.obj" \
+"pinmux.obj" \
 "timer_if.obj" \
 "tmp006drv.obj" \
 "uart_if.obj" 
 
 C_SRCS__QUOTED += \
-"V:/TI/cc3200_cloud/exosite_cloud_demo_for_cc3200/bma222drv.c" \
-"V:/TI/exosite_cloud_demo_for_cc3200/common/button_if.c" \
-"V:/TI/cc3200_cloud/exosite_cloud_demo_for_cc3200/cloud_demo.c" \
-"V:/TI/exosite_cloud_demo_for_cc3200/common/gpio_if.c" \
-"V:/TI/exosite_cloud_demo_for_cc3200/common/i2c_if.c" \
-"V:/TI/cc3200_cloud/exosite_cloud_demo_for_cc3200/main.c" \
-"V:/TI/exosite_cloud_demo_for_cc3200/common/timer_if.c" \
-"V:/TI/cc3200_cloud/exosite_cloud_demo_for_cc3200/tmp006drv.c" \
-"V:/TI/exosite_cloud_demo_for_cc3200/common/uart_if.c" 
+"C:/Users/Patrick/Desktop/CC3200CloudDemo-master/exosite_cloud_demo_for_cc3200/bma222drv.c" \
+"C:/Users/Patrick/Desktop/CC3200CloudDemo-master/common/button_if.c" \
+"C:/Users/Patrick/Desktop/CC3200CloudDemo-master/exosite_cloud_demo_for_cc3200/cloud_demo.c" \
+"C:/Users/Patrick/Desktop/CC3200CloudDemo-master/common/gpio_if.c" \
+"C:/Users/Patrick/Desktop/CC3200CloudDemo-master/common/i2c_if.c" \
+"C:/Users/Patrick/Desktop/CC3200CloudDemo-master/exosite_cloud_demo_for_cc3200/main.c" \
+"C:/Users/Patrick/Desktop/CC3200CloudDemo-master/exosite_cloud_demo_for_cc3200/pinmux.c" \
+"C:/Users/Patrick/Desktop/CC3200CloudDemo-master/common/timer_if.c" \
+"C:/Users/Patrick/Desktop/CC3200CloudDemo-master/exosite_cloud_demo_for_cc3200/tmp006drv.c" \
+"C:/Users/Patrick/Desktop/CC3200CloudDemo-master/common/uart_if.c" 
 
 

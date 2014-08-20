@@ -4,7 +4,7 @@
 
 SHELL = cmd.exe
 
-CG_TOOL_ROOT := c:/ti/ccsv6/tools/compiler/arm_5.1.5
+CG_TOOL_ROOT := c:/ti/ccsv6/tools/compiler/arm_5.1.7
 
 ORDERED_OBJS += \
 $(GEN_CMDS__FLAG) \
@@ -119,11 +119,14 @@ LIB_OUTPUTS__QUOTED += \
 # All Target
 all: ti_rtos.a
 
+dependents:
+	-cd C:/ti/tirtos_simplelink_2_00_02_36/products/cc3200-sdk_0.51a/ti_rtos/ti_rtos_config/Default && $(MAKE) clean all
+
 # Tool invocations
-ti_rtos.a: $(OBJS) $(A_SRCS)
+ti_rtos.a: $(OBJS) $(A_SRCS) C:/ti/tirtos_simplelink_2_00_02_36/products/cc3200-sdk_0.51a/ti_rtos/ti_rtos_config/Default/configPkg/linker.cmd
 	@echo 'Building target: $@'
 	@echo 'Invoking: ARM Archiver'
-	"c:/ti/ccsv6/tools/compiler/arm_5.1.5/bin/armar" r "ti_rtos.a" $(ORDERED_OBJS) $(A_SRCS)
+	"c:/ti/ccsv6/tools/compiler/arm_5.1.7/bin/armar" r "ti_rtos.a" $(ORDERED_OBJS) $(A_SRCS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -137,6 +140,7 @@ clean:
 
 .PHONY: all clean dependents
 .SECONDARY:
+C:/ti/tirtos_simplelink_2_00_02_36/products/cc3200-sdk_0.51a/ti_rtos/ti_rtos_config/Default/configPkg/linker.cmd:
 
 -include ../makefile.targets
 

@@ -4,33 +4,33 @@
 
 SHELL = cmd.exe
 
-CG_TOOL_ROOT := c:/ti/ccsv6/tools/compiler/arm_5.1.5
+CG_TOOL_ROOT := c:/ti/ccsv6/tools/compiler/arm_5.1.7
 
 ORDERED_OBJS += \
 $(GEN_CMDS__FLAG) \
-"./wdt.obj" \
-"./utils.obj" \
-"./udma.obj" \
-"./uart.obj" \
-"./timer.obj" \
-"./systick.obj" \
-"./spi.obj" \
-"./shamd5.obj" \
-"./sdhost.obj" \
-"./prcm.obj" \
-"./pin.obj" \
-"./interrupt.obj" \
-"./i2s.obj" \
-"./i2c.obj" \
-"./hwspinlock.obj" \
-"./gpio.obj" \
-"./flash.obj" \
-"./des.obj" \
-"./crc.obj" \
-"./cpu.obj" \
-"./camera.obj" \
-"./aes.obj" \
 "./adc.obj" \
+"./aes.obj" \
+"./camera.obj" \
+"./cpu.obj" \
+"./crc.obj" \
+"./des.obj" \
+"./flash.obj" \
+"./gpio.obj" \
+"./hwspinlock.obj" \
+"./i2c.obj" \
+"./i2s.obj" \
+"./interrupt.obj" \
+"./pin.obj" \
+"./prcm.obj" \
+"./sdhost.obj" \
+"./shamd5.obj" \
+"./spi.obj" \
+"./systick.obj" \
+"./timer.obj" \
+"./uart.obj" \
+"./udma.obj" \
+"./utils.obj" \
+"./wdt.obj" \
 
 -include ../makefile.init
 
@@ -143,7 +143,7 @@ all: driverlib.a
 driverlib.a: $(OBJS) $(A_SRCS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: ARM Archiver'
-	"c:/ti/ccsv6/tools/compiler/arm_5.1.5/bin/armar" r "driverlib.a" $(ORDERED_OBJS) $(A_SRCS)
+	"c:/ti/ccsv6/tools/compiler/arm_5.1.7/bin/armar" r "driverlib.a" $(ORDERED_OBJS) $(A_SRCS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 

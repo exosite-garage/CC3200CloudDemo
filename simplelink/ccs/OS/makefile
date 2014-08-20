@@ -4,21 +4,21 @@
 
 SHELL = cmd.exe
 
-CG_TOOL_ROOT := c:/ti/ccsv6/tools/compiler/arm_5.1.5
+CG_TOOL_ROOT := c:/ti/ccsv6/tools/compiler/arm_5.1.7
 
 ORDERED_OBJS += \
 $(GEN_CMDS__FLAG) \
-"./wlan.obj" \
-"./spawn.obj" \
-"./socket.obj" \
-"./nonos.obj" \
-"./netcfg.obj" \
-"./netapp.obj" \
-"./fs.obj" \
-"./flowcont.obj" \
-"./driver.obj" \
-"./device.obj" \
 "./cc_pal.obj" \
+"./device.obj" \
+"./driver.obj" \
+"./flowcont.obj" \
+"./fs.obj" \
+"./netapp.obj" \
+"./netcfg.obj" \
+"./nonos.obj" \
+"./socket.obj" \
+"./spawn.obj" \
+"./wlan.obj" \
 
 -include ../makefile.init
 
@@ -131,7 +131,7 @@ all: simplelink.a
 simplelink.a: $(OBJS) $(A_SRCS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: ARM Archiver'
-	"c:/ti/ccsv6/tools/compiler/arm_5.1.5/bin/armar" r "simplelink.a" $(ORDERED_OBJS) $(A_SRCS)
+	"c:/ti/ccsv6/tools/compiler/arm_5.1.7/bin/armar" r "simplelink.a" $(ORDERED_OBJS) $(A_SRCS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
