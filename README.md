@@ -1,3 +1,4 @@
+Note: This code has several known issues - see list below.
 ================================================================================
 About Cloud enabled CC3200 Launchpad
 ================================================================================
@@ -112,7 +113,7 @@ LED Status
 ================================================================================
 Known Issues
 ================================================================================
-* Some boards seem to be throwing an exception when setting an LED.
+* Serial debug messages aren't making it out, no serial output at all.
 * The temperature readings seem to be very eratic, jupping several degrees
   within a single second.
 * The application will only run for about 20 minutes, this seems to be an issue
