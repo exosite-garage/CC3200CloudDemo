@@ -41,7 +41,6 @@
 #include "tmp006drv.h"
 #include "bma222drv.h"
 #include <stdio.h>
-#include <stdlib.h>
 
 // local variables
 #define VENDOR_NAME            "texasinstruments"
@@ -62,10 +61,6 @@ volatile int sw2_button_on = 0;
 volatile _NetCfgIpV4Args_t g_ipV4 = {0};
 int threshold = 300;
 int holdoff = 0;
-static signed char accX = 0;
-static signed char accY = 0;
-static signed char accZ = 0;
-static float fCurrentTemp = 0;
 
 // local functions
 
@@ -91,6 +86,9 @@ float get_acc_movement(void)
 {
   float movement;
 
+  signed char accX = 0;
+  signed char accY = 0;
+  signed char accZ = 0;
   BMA222Read(&accX, &accY, &accZ);
 
   movement = (((float)abs(accX)) + abs(accY) + abs(accZ)) - 64;
@@ -183,11 +181,6 @@ void Demo_Tick(void)
   {
     // do something every 1 sec
 	uptime++;
-    TMP006DrvGetTemp(&fCurrentTemp);
-
-    new_accel =  get_acc_movement();
-    if(new_accel > max_accel)
-      max_accel = new_accel;
   }
   if (tickcnt % 1200 == 0) // 2 mins
   {
@@ -197,6 +190,11 @@ void Demo_Tick(void)
   tickcnt++;
   if (tickcnt >= 0xFFFFFFFF)
     tickcnt = 0;
+
+  // Check for higher accelermoter movment
+  new_accel =  get_acc_movement();
+  if(new_accel > max_accel)
+	max_accel = new_accel;
 }
 
 /*****************************************************************************
@@ -213,8 +211,6 @@ void Demo_Tick(void)
 void Status_Idicate(void)
 {
   int state = Exosite_StatusCode();
-  if (led_onoff == 0)
-    return;
   if (EXO_STATUS_OK == state)
   {
     blinky_led7(1);
@@ -250,6 +246,10 @@ void Cloud_Read(void)
     ledx[Read_status] = 0;
     cloud_data = atoi(&ledx[0]);
     Report("Exosite Read:  %s=%d\r\n", LEDCTRL_ALIAS, cloud_data);
+    if (cloud_data == 1)
+      GPIO_IF_LedOn(MCU_RED_LED_GPIO);
+    else
+      GPIO_IF_LedOff(MCU_RED_LED_GPIO);
 
     led_onoff = cloud_data;
   }
@@ -271,11 +271,17 @@ void Report_Sensors(void)
   int state = 0;
   char post_str[200];
   int post_len = 0;
-
+  float fCurrentTemp = 0;
   float cCurrentTemp = 0;
+  signed char accX = 0;
+  signed char accY = 0;
+  signed char accZ = 0;
 
+  BMA222Read(&accX, &accY, &accZ);
+
+  TMP006DrvGetTemp(&fCurrentTemp);
   cCurrentTemp = ((fCurrentTemp - 32) * 5) / 9;
-  Report("Temputure : %.2f F, %.2f C\r\n", fCurrentTemp, cCurrentTemp);
+  //Report("Temputure : %.2f F, %.2f C\r\n", fCurrentTemp, cCurrentTemp);
 
   memcpy(&post_str[post_len], PING_ALIAS, strlen(PING_ALIAS));
   post_len += strlen(PING_ALIAS);
@@ -284,7 +290,6 @@ void Report_Sensors(void)
   sprintf(&post_str[post_len], "%d", uptime);
 
   post_len = strlen(post_str);
-
   post_str[post_len] = '&';
   post_len++;
 
@@ -302,6 +307,7 @@ void Report_Sensors(void)
   post_len++;
   sprintf(&post_str[post_len], "%d", (char)sw2_button_on);
   post_len = strlen(post_str);
+
   post_len += snprintf(&post_str[post_len], 33, "&acc=%.0f&accX=%d&accY=%d&accZ=%d",
 		  max_accel,
 		  accX,
