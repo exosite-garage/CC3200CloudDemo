@@ -113,7 +113,10 @@ LED Status
 ================================================================================
 Known Issues
 ================================================================================
-* Serial debug messages aren't making it out, no serial output at all.
+* Getting debugger errors, not sure if code/config/project problem or virtualbox
+  problem. (Let me know if you see any issues.)
+  - Workaround: Wait until it breaks in boot.asm and press continue, your code
+    will then run normally.
 * The temperature readings seem to be very eratic, jupping several degrees
   within a single second.
 * The application will only run for about 20 minutes, this seems to be an issue
