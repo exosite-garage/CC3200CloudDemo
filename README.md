@@ -106,9 +106,8 @@ follow the instructions in the Quick Start Guide included in the SDK.
 ================================================================================
 LED Status
 ================================================================================
-** LED7 - blinking 1 times - Exosite connected
-          blinking 2 times - NO Authentication or TCP socket error
-          blinking 3 times - CIK not valid or Conflict
+** LED D7 - blinking 2 times - NO Authentication or TCP socket error
+          - blinking 3 times - CIK not valid or Conflict
 
 ================================================================================
 Known Issues

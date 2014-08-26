@@ -211,11 +211,7 @@ void Demo_Tick(void)
 void Status_Idicate(void)
 {
   int state = Exosite_StatusCode();
-  if (EXO_STATUS_OK == state)
-  {
-    blinky_led7(1);
-  }
-  else if ((EXO_STATUS_NOAUTH == state || EXO_STATUS_BAD_TCP == state))
+  if ((EXO_STATUS_NOAUTH == state || EXO_STATUS_BAD_TCP == state))
   {
     blinky_led7(2);
   }
