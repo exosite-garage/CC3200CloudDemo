@@ -50,6 +50,8 @@ enum lineTypes
 {
   CIK_LINE,
   HOST_LINE,
+  USER_AGENT_LINE,
+  CONNECTION_LINE,
   CONTENT_LINE,
   ACCEPT_LINE,
   LENGTH_LINE,
@@ -64,6 +66,8 @@ enum lineTypes
 #define STR_GET_URL "GET /onep:v1/stack/alias?"
 #define STR_HTTP "  HTTP/1.1\r\n"
 #define STR_HOST "Host: m2.exosite.com\r\n"
+#define STR_USER_AGENT "User-Agent: ti-cc3200/0\r\n"
+#define STR_CONNECTION "Connection: close\r\n"
 #define STR_ACCEPT "Accept: application/x-www-form-urlencoded; charset=utf-8\r\n"
 #define STR_CONTENT "Content-Type: application/x-www-form-urlencoded; charset=utf-8\r\n"
 #define STR_VENDOR "vendor="
@@ -270,6 +274,8 @@ Exosite_Activate(void)
 
   sendLine(sock, POSTDATA_LINE, "/provision/activate");
   sendLine(sock, HOST_LINE, NULL);
+  sendLine(sock, USER_AGENT_LINE, NULL);
+  sendLine(sock, CONNECTION_LINE, NULL);
   sendLine(sock, CONTENT_LINE, NULL);
   sendLine(sock, LENGTH_LINE, strLen);
 
@@ -505,6 +511,8 @@ Exosite_Write(char * pbuf, unsigned char bufsize)
 
   sendLine(sock, POSTDATA_LINE, "/onep:v1/stack/alias");
   sendLine(sock, HOST_LINE, NULL);
+  sendLine(sock, USER_AGENT_LINE, NULL);
+  sendLine(sock, CONNECTION_LINE, NULL);
   sendLine(sock, CIK_LINE, bufCIK);
   sendLine(sock, CONTENT_LINE, NULL);
   sendLine(sock, LENGTH_LINE, strBuf);
@@ -575,6 +583,8 @@ Exosite_Read(char * palias, char * pbuf, unsigned char buflen)
 
   sendLine(sock, GETDATA_LINE, palias);
   sendLine(sock, HOST_LINE, NULL);
+  sendLine(sock, USER_AGENT_LINE, NULL);
+  sendLine(sock, CONNECTION_LINE, NULL);
   sendLine(sock, CIK_LINE, bufCIK);
   sendLine(sock, ACCEPT_LINE, "\r\n");
 
@@ -791,6 +801,14 @@ sendLine(long socket, unsigned char LINE, const char * payload)
     case HOST_LINE:
       strLen = strlen(STR_HOST);
       memcpy(strBuf,STR_HOST,strLen);
+      break;
+    case USER_AGENT_LINE:
+      strLen = strlen(STR_USER_AGENT);
+      memcpy(strBuf,STR_USER_AGENT,strLen);
+      break;
+    case CONNECTION_LINE:
+      strLen = strlen(STR_CONNECTION);
+      memcpy(strBuf,STR_CONNECTION,strLen);
       break;
     case CONTENT_LINE:
       strLen = strlen(STR_CONTENT);
