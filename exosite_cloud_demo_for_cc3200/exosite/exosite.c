@@ -716,7 +716,7 @@ connect_to_exosite(void)
 
     sock = exoHAL_SocketOpenTCP(server);
 
-    if (sock == -1)
+    if (sock < 0)
     {
       continue;
     }
