@@ -1,0 +1,5 @@
+# CCS Files and Binaries
+*.obj
+*.pp
+*.a
+*.out
