@@ -66,7 +66,7 @@ enum lineTypes
 #define STR_GET_URL "GET /onep:v1/stack/alias?"
 #define STR_HTTP "  HTTP/1.1\r\n"
 #define STR_HOST "Host: m2.exosite.com\r\n"
-#define STR_USER_AGENT "User-Agent: ti-cc3200/0\r\n"
+#define STR_USER_AGENT "User-Agent: ti-cc3200/BETA\r\n"
 #define STR_CONNECTION "Connection: close\r\n"
 #define STR_ACCEPT "Accept: application/x-www-form-urlencoded; charset=utf-8\r\n"
 #define STR_CONTENT "Content-Type: application/x-www-form-urlencoded; charset=utf-8\r\n"
