@@ -41,6 +41,7 @@
 #include "tmp006drv.h"
 #include "bma222drv.h"
 #include <stdio.h>
+#include <limits.h>
 
 // local variables
 #define VENDOR_NAME            "texasinstruments"
@@ -360,7 +361,10 @@ void cloud_demo( void )
 {
   int exo_state = -1;
   unsigned char ucDHCP = 0;
-  unsigned int demo_delay = 1000;//800000;
+  unsigned int delay_multiplier = 1;
+  unsigned int read_interval = 1;
+  unsigned int write_interval = 4;
+  unsigned int interval_counter = 0;
   unsigned char len = sizeof(_NetCfgIpV4Args_t);
 
   Exosite_Init(VENDOR_NAME, MODEL_NAME, IF_WIFI, 0);
@@ -375,8 +379,11 @@ void cloud_demo( void )
       exo_state = Exosite_StatusCode();
       if (EXO_STATUS_OK == exo_state)
       {
-        Report_Sensors();
-        Cloud_Read();
+        if(interval_counter % write_interval == 0)
+          Report_Sensors();
+
+        if(interval_counter % read_interval == 0)
+          Cloud_Read();
       }
       else if (EXO_STATUS_BAD_TCP != exo_state)
       {
@@ -385,15 +392,20 @@ void cloud_demo( void )
         else
           Report("Exosite: Activated\r\n");
       }
-      demo_delay = 2;
+      delay_multiplier = 1;
     }
     else
     {
       Report("WiFi Disconnected\r\n");
-      demo_delay = 30;
+      delay_multiplier = 60;
     }
     Status_Idicate();
-    osi_Sleep(demo_delay * 1000);  // delay * 1 sec
+    osi_Sleep(delay_multiplier * 500);  // delay * 500 ms
+
+    if(interval_counter == UINT_MAX)
+      interval_counter = 0;
+
+    interval_counter++;
   }
 }
 
