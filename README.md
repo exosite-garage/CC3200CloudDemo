@@ -120,6 +120,11 @@ Known Issues
   within a single second.
 * The application will only run for about 20 minutes, this seems to be an issue
   related to using i2c.
+  - Update: The first stability issue has been "fixed". It has something to do
+    with running out of sockets. I'm not sure if this means file descriptors
+    or actual open sockets where they just aren't getting closed quick enough.
+    The "fix" is to just disconnect from the AP and start over any time we get
+    an error we're not expecting.
 
 ================================================================================
 Release Info
