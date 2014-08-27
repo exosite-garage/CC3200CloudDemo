@@ -77,7 +77,6 @@ enum lineTypes
 
 // local functions
 int info_assemble(const char * vendor, const char *model, const char *sn);
-int init_UUID(unsigned char if_nbr);
 void update_m2ip(void);
 int get_http_status(long socket);
 long connect_to_exosite();
