@@ -392,6 +392,14 @@ void cloud_demo( void )
         else
           Report("Exosite: Activated\r\n");
       }
+      else
+      {
+        Report("Bad Internet Connection, Reconnecting\r\n");
+
+        // This is a bit of a brute-force method, there is probably
+        // something more intelligent we could do here.
+        return;
+      }
       delay_multiplier = 1;
     }
     else

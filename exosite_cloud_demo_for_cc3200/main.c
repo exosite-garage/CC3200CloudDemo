@@ -488,13 +488,13 @@ void ProvisioningAP(void* pTaskParams)
         	}
         }
         g_ucConnectedToConfAP = g_ucConnectionStatus;
-        //sl_WlanDisconnect();
-        while (g_ucConnectedToConfAP)
-        {
-        	cloud_demo();
-        }
+
+        cloud_demo();
+
         sl_WlanDisconnect();
     }
+
+    Report("End of Program\r\n");
 }
 
 //*****************************************************************************
