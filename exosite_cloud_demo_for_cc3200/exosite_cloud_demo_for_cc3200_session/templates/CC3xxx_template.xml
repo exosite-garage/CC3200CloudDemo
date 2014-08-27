@@ -98,7 +98,7 @@
       <Type>blob</Type>
       <Storage>SFLASH</Storage>
       <MaxSize>0</MaxSize>
-      <url>C:\ti\CC3200SDK\cc3200-sdk\example\provisioning_ap\ewarm\Release\Exe\provisioning_ap.bin</url>
+      <url>${sessionDir}\..\ccs\Release\exosite_cloud_demo_for_cc3200.bin</url>
       <mode>
          <ModeEntry name="Rollback" checked="false"/>
          <ModeEntry name="Secured" checked="false"/>
@@ -119,7 +119,7 @@
       <Type>blob</Type>
       <Storage>SFLASH</Storage>
       <MaxSize>0</MaxSize>
-      <url>C:\ti\CC3200SDK\cc3200-sdk\example\provisioning_ap\html\profiles_config.html</url>
+      <url>${sessionDir}\..\html\profiles_config.html</url>
       <mode>
          <ModeEntry name="Rollback" checked="false"/>
          <ModeEntry name="Secured" checked="false"/>
@@ -140,7 +140,7 @@
       <Type>blob</Type>
       <Storage>SFLASH</Storage>
       <MaxSize>0</MaxSize>
-      <url>C:\ti\CC3200SDK\cc3200-sdk\example\provisioning_ap\html\main.html</url>
+      <url>${sessionDir}\..\html\main.html</url>
       <mode>
          <ModeEntry name="Rollback" checked="false"/>
          <ModeEntry name="Secured" checked="false"/>
@@ -161,7 +161,7 @@
       <Type>blob</Type>
       <Storage>SFLASH</Storage>
       <MaxSize>0</MaxSize>
-      <url>C:\ti\CC3200SDK\cc3200-sdk\example\provisioning_ap\html\param_status.html</url>
+      <url>${sessionDir}\..\html\param_status.html</url>
       <mode>
          <ModeEntry name="Rollback" checked="false"/>
          <ModeEntry name="Secured" checked="false"/>
