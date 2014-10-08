@@ -182,7 +182,7 @@
       <Type>blob</Type>
       <Storage>SFLASH</Storage>
       <MaxSize>0</MaxSize>
-      <url>C:\ti\CC3200SDK\cc3200-sdk\example\provisioning_ap\html\js\jquery-1.8.3.min.js</url>
+      <url>${sessionDir}\..\html\js\jquery-1.8.3.min.js</url>
       <mode>
          <ModeEntry name="Rollback" checked="false"/>
          <ModeEntry name="Secured" checked="false"/>

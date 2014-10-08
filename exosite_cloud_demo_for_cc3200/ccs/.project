@@ -29,7 +29,7 @@
 		<link>
 			<name>CC3200.ccxml</name>
 			<type>1</type>
-			<location>C:/Users/Patrick/ti/CCSTargetConfigurations/CC3200.ccxml</location>
+			<location>PROJECT_LOC/targetConfigs/CC3200.ccxml</location>
 		</link>
 		<link>
 			<name>bma222drv.c</name>
