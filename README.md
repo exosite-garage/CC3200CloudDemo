@@ -1,4 +1,9 @@
-Note: This code has several known issues - see list below.
+Note: This code is now deprecieated and won't be updated in future. The second
+version is in process and is available in the v2 branch. All new development 
+should be done against the version 2 code, but note that it is still prerelease
+quality and is not feature complete. (But is already more reliable than the code
+in this repo.)
+
 ================================================================================
 About Cloud enabled CC3200 Launchpad
 ================================================================================
