@@ -1,4 +1,4 @@
-Note: This code is now deprecieated and won't be updated in future. The second
+Note: This code is now depreciated and won't be updated in future. The second
 version is in process and is available in the v2 branch. All new development 
 should be done against the version 2 code, but note that it is still prerelease
 quality and is not feature complete. (But is already more reliable than the code
